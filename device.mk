@@ -26,6 +26,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.0-impl-mock
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+	android.hardware.gatekeeper@1.0-service
+
+PRODUCT_COPY_FILES += \
+	$(OUT_DIR)/target/product/garden/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.gatekeeper@1.0-service
+
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
 	libkeymaster4 \
