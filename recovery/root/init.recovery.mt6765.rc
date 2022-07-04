@@ -1,4 +1,4 @@
-import /microtrust.rc
+import /init.recovery.microtrust.rc
 
 on init
     mkdir /mnt/vendor/persist 0700 root root
