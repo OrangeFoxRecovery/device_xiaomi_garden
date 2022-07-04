@@ -26,6 +26,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.0-impl-mock
 
+# MT6762 Init
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/recovery/root/init.recovery.mt6765.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6762.rc
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
 	android.hardware.gatekeeper@1.0-service
