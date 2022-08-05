@@ -44,8 +44,6 @@ service unified-script /system/bin/unified-script.sh
 
 on boot
     start health-hal-2-1
-    chmod 0777 /system/bin/unified-script.sh
-    start unified-script
 
 on property:hwservicemanager.ready=true
     start keymaster-4-0
@@ -71,3 +69,6 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
+
+on boot
+    start unified-script

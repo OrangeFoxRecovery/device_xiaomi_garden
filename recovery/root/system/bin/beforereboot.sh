@@ -25,7 +25,8 @@ clear_init_fatal_reboot_target() {
    local bytes=512;
    usleep 4096;
    echo "Executing $0" >> /tmp/recovery.log
-   dd if=/dev/zero of=/dev/block/platform/bootdevice/by-name/para bs=$bytes count=1;
+   local MISC_PATH="/dev/block/platform/bootdevice/by-name/para";
+   dd if=/dev/zero of=$MISC_PATH bs=$bytes count=1;
    usleep 4096;
 }
 
