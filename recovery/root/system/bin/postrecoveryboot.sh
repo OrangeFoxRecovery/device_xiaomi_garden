@@ -1,4 +1,4 @@
-#!/sbin/sh
+#!/system/bin/sh
 #
 #	This file is part of the OrangeFox Recovery Project
 # 	Copyright (C) 2019-2022 The OrangeFox Recovery Project
@@ -26,7 +26,7 @@ set_read_write_partitions() {
   local DYNAMIC_PARTITIONS="system vendor product"
   for DYNAMIC_PARTITION in ${DYNAMIC_PARTITIONS}
   do
-     echo "I:OrangeFox: setting $DYNAMIC_PARTITION to read/write" >> /tmp/recovery.log;
+     echo "I: Setting $DYNAMIC_PARTITION to read/write" >> /tmp/recovery.log;
      blockdev --setrw /dev/block/mapper/${DYNAMIC_PARTITION};
   done
   unset DYNAMIC_PARTITION;

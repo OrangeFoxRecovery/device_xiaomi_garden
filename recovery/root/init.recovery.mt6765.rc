@@ -43,8 +43,7 @@ service unified-script /system/bin/unified-script.sh
     seclabel u:r:recovery:s0
 
 on boot
-    chmod 0777 /system/bin/unified-script.sh
-    start unified-script
+    start health-hal-2-1
 
 on property:hwservicemanager.ready=true
     start keymaster-4-0
@@ -70,3 +69,6 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
+
+on boot
+    start unified-script
