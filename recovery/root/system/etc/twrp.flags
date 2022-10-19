@@ -8,6 +8,7 @@
 /boot			emmc		/dev/block/platform/bootdevice/by-name/boot			flags=display="Boot"
 /cache			ext4		/dev/block/platform/bootdevice/by-name/cache			flags=display="Cache"
 /storage		f2fs		/data/media/0							flags=display="Internal Storage";backup=1;usermrf;fsflags="bind";removable
+/super_image		emmc		/dev/block/platform/bootdevice/by-name/super			flags=display="Super Image";backup=0;flashimg=1
 /logo			emmc		/dev/block/platform/bootdevice/by-name/logo			flags=display="Boot Logo";backup=1
 /protect_f		emmc		/dev/block/platform/bootdevice/by-name/protect1			flags=backup=1
 /protect_s		emmc		/dev/block/platform/bootdevice/by-name/protect2			flags=backup=1
